@@ -42,7 +42,7 @@ typedef struct {
 
 
 // Setting up Enigma Models
-Enigma* init_enigma(const char *rotor_labels[3], const uint8_t rotor_ring, const uint8_t rotor_position, const char reflector_label, Plugboard plugboard);
+Enigma* init_enigma(const char *rotor_labels[3], const uint8_t * rotor_ring, const uint8_t * rotor_position, const char reflector_label, Plugboard plugboard);
 void init_mapping(Mapping mapping, const char *alphabet);
 void init_reverse_mapping(Mapping reverse_mapping, Mapping mapping);
 void init_rotor(Rotor * r, const char * rotor_label, const uint8_t rotor_ring, const uint8_t rotor_position);

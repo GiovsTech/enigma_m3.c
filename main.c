@@ -11,8 +11,8 @@ int main(int argc, char* argv[]){
         exit(0);
     }
     const char *rotors[3] = {"III", "II", "I"};
-    uint8_t rotor_ring = 0;
-    uint8_t rotor_position = 0;
+    uint8_t rotor_ring[3] = {  2,    1,    1};
+    uint8_t rotor_position[3] = {1,  1,    1};
     const char reflector_label = 'B';
     uint8_t pairs[10][2] = {
         {0, 25},  // A <-> Z

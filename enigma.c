@@ -59,11 +59,11 @@ void init_reflector(Reflector * reflector, const char reflector_label){
     reflector->label = reflector_label;
 }
 
-Enigma* init_enigma(const char *rotor_labels[3],const uint8_t rotor_ring, const uint8_t rotor_position, const char reflector_label, Plugboard plugboard){
+Enigma* init_enigma(const char *rotor_labels[3],const uint8_t *rotor_ring, const uint8_t *rotor_position, const char reflector_label, Plugboard plugboard){
     Enigma * m = malloc(sizeof(Enigma));
-    init_rotor(&m->rotors[0], rotor_labels[2], rotor_ring, rotor_position);
-    init_rotor(&m->rotors[1], rotor_labels[1], rotor_ring, rotor_position);
-    init_rotor(&m->rotors[2], rotor_labels[0], rotor_ring, rotor_position);
+    init_rotor(&m->rotors[0], rotor_labels[2], rotor_ring[2], rotor_position[2]);
+    init_rotor(&m->rotors[1], rotor_labels[1], rotor_ring[1], rotor_position[1]);
+    init_rotor(&m->rotors[2], rotor_labels[0], rotor_ring[0], rotor_position[0]);
     init_reflector(&m->reflector, reflector_label);
     if(plugboard.board_size > PLUGBOARD_SIZE){
         printf("An error occurred: the given plugboard_size is greater than the maximum allowed\n");
